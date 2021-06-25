@@ -7,7 +7,7 @@ Demandware/SFCC login automater including MFA generation
 - Download or clone this repository
 - Open the downloaded folder, and edit the config.json file
     - Use your email/password you use for login into Business manager to fill "username" and "password" fields
-    - Fill the OTP secret key with the one given by Salesforce (cf. [How to get the OTP secret](#how-to-initialize-an-otp-secret))
+    - Fill the OTP secret key with the one given by Salesforce (cf. [How to get the OTP secret](https://github.com/ismailnguyen/dwauther/tree/main#how-to-get-the-otp-secret))
 - Open Google Chrome
 - Go to chrome://extensions or to Extensions page
 - Tick "Developer mode" case
