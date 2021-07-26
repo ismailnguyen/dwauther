@@ -3,14 +3,10 @@ var passwordFilled = false
 var mfaFilled = false
 
 var auth = function () {
-  console.log(config)
-  console.log('try fill username')
   if (!usernameFilled && $('#idToken1').length) {
     $('#idToken1').val(config.username)
     $('#loginButton_0').click()
     usernameFilled = true
-    console.log('filled username with', config.username)
-
   }
 
   if (!usernameFilled) {
@@ -23,8 +19,6 @@ var auth = function () {
     $('#idToken2').val(config.password)
     $('#loginButton_0').click()
     passwordFilled = true
-    console.log('filled pwd with',  config.password)
-
   }
 
   if (!passwordFilled)
@@ -34,7 +28,6 @@ var auth = function () {
 var verify = function () {
   if (!mfaFilled && $('input[type=text]').length) {
     var mfaKey = window.otplib.authenticator.generate(config.otpSecret)
-    console.log('mfa step ongoing', config, mfaKey)
     $('input[type=text]').val(mfaKey)
     $('button[type=submit]').click()
     mfaFilled = true
