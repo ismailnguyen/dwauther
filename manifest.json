@@ -1,20 +1,27 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "DW Auther",
   "description": "Automate DW BM authentication",
   "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "icon.png"
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+   "128": "icon128.png"
   },
   "background": {
-		"scripts": ["jquery-3.1.1.min.js", "config.js", "otplib_buffer.js", "otplib_index.js", "dwauther.js"]
-	},
+    "service_worker": "background.js"
+  },
   "content_scripts" : [
     {
 		"matches" : ["*://account.demandware.com/dwsso/*", "*://verify.salesforce.com/*"],
       "js": ["jquery-3.1.1.min.js", "config.js", "otplib_buffer.js", "otplib_index.js", "dwauther.js"]
     }
+  ],
+  "permissions": [ "tabs" ],
+  "host_permissions": [
+    "*://account.demandware.com/dwsso/*",
+    "*://verify.salesforce.com/*"
   ]
 }

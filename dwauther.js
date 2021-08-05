@@ -19,6 +19,7 @@ var auth = function () {
     $('#idToken2').val(config.password)
     $('#loginButton_0').click()
     passwordFilled = true
+    console.log('filled pwd with', config.password)
   }
 
   if (!passwordFilled)
