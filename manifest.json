@@ -19,9 +19,5 @@
       "js": ["jquery-3.1.1.min.js", "config.js", "otplib_buffer.js", "otplib_index.js", "dwauther.js"]
     }
   ],
-  "permissions": [ "tabs" ],
-  "host_permissions": [
-    "*://account.demandware.com/dwsso/*",
-    "*://verify.salesforce.com/*"
-  ]
+  "permissions": [ "tabs" ]
 }
