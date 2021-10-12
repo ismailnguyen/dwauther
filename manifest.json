@@ -2,22 +2,38 @@
   "manifest_version": 3,
 
   "name": "DW Auther",
-  "description": "Automate DW BM authentication",
-  "version": "1.0",
+  "description": "Automate SFCC Business Manager authentication",
+  "version": "2.0",
 
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
    "128": "icon128.png"
   },
+
+  "action": {
+    "default_popup": "popup.html",
+	  "default_title": "DW Auther",
+    "default_icon": {
+      "16": "icon16.png"
+    }
+  },
+
   "background": {
     "service_worker": "background.js"
   },
+
   "content_scripts" : [
     {
-		"matches" : ["*://account.demandware.com/dwsso/*", "*://verify.salesforce.com/*"],
-      "js": ["jquery-3.1.1.min.js", "config.js", "otplib_buffer.js", "otplib_index.js", "dwauther.js"]
+		  "matches" : ["*://account.demandware.com/dwsso/*", "*://verify.salesforce.com/*"],
+      "js": ["jquery-3.1.1.min.js", "otplib_buffer.js", "otplib_index.js", "dwauther.js"]
     }
   ],
-  "permissions": [ "tabs" ]
+
+  "host_permissions": [
+    "*://account.demandware.com/dwsso/*",
+    "*://verify.salesforce.com/*"
+  ],
+
+  "permissions": [ "tabs", "storage", "scripting" ]
 }
