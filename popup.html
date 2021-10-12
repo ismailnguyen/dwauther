@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DW Auther</title>
+
+	<script src="jquery-3.1.1.min.js"></script>
+    <script src="popup.js"></script>
+	
+	<link rel="stylesheet" href="bulma.min.css">
+	
+	<style>
+		body {
+			font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+			font-size: 100%;
+		}
+		
+		* {
+			margin: 0;
+			position: relative;
+		}
+
+		body {
+		  color: #162056;
+		  background: #f8f9fa;
+		}
+		
+		.box {
+			background: none;
+			border: none;
+			box-shadow: none;
+		}
+
+        .fadeOutUp {
+            animation-name: fadeOutUp;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeOutUp {
+            from {
+                opacity: 1;
+            }
+
+            0% {
+                opacity: 0;
+                background: rgba(0,0,0,.7);
+            }
+            
+            50% {
+                opacity: 1;
+                transform: translate3d(0, 50px, 0);
+                background: #48c774;
+            }
+            
+            100% {
+                opacity: 0;
+                transform: translate3d(0, -200px, 0);
+            }
+        }
+    </style>
+	
+  </head>
+  <body>
+    
+    <div class="box">
+        <div class="field">
+            <label for="" class="label">Email</label>
+            <div class="control">
+                <input id="email-input" type="email" placeholder="e.g. mahatma@gandhi.com" class="input" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="" class="label">Password</label>
+            <div class="control">
+                <input id="password-input" type="password" placeholder="*******" class="input" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="" class="label">OTP secret</label>
+            <div class="control">
+                <input id="otp-secret-input" type="text" placeholder="Your OTP secret here" class="input" required>
+            </div>
+        </div>
+        <div class="field">
+            <button class="button is-success" id="save-btn">
+                Save
+            </button>
+        </div>
+    </div>
+	
+	<noscript>Please enable JavaScript to use this application</noscript>
+  </body>
+</html>
