@@ -8,6 +8,8 @@
     <title>DW Auther</title>
 
 	<script src="jquery-3.1.1.min.js"></script>
+    <script src="otplib_buffer.js"></script>
+    <script src="otplib_index.js"></script>
     <script src="popup.js"></script>
 	
 	<link rel="stylesheet" href="bulma.min.css">
@@ -65,33 +67,70 @@
 	
   </head>
   <body>
-    
-    <div class="box">
-        <div class="field">
-            <label for="" class="label">Email</label>
-            <div class="control">
-                <input id="email-input" type="email" placeholder="e.g. mahatma@gandhi.com" class="input" required>
+
+    <section class="hero">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+              <img src="icon48.png" alt="DW Auther" title="DW Auther"/>
+            </div>
+        </div> 
+          
+        <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth is-large">
+            <div class="container">
+                <ul>
+                    <li class="tab is-active" data-tab-id="Token"><a>Token</a></li>
+                    <li class="tab" data-tab-id="Settings"><a>Settings</a></li>
+                  </ul>
+                </div>
+              </nav>
+          </div>
+        </section>
+        
+        <div class="container section">
+            <div id="Token" class="content-tab">
+                <div class="fieldset">
+                    <div class="field has-addons has-addons">
+                        <p class="control">
+                            <input id="token-input" type="text" class="input">
+                        </p>
+                        <p class="control">
+                          <a class="button is-link is-light" id="generate-btn">
+                            Generate
+                          </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="Settings" class="content-tab" style="display:none">
+                <div class="box">
+                    <div class="field">
+                        <label for="email-input" class="label">Email</label>
+                        <div class="control">
+                            <input id="email-input" type="email" placeholder="e.g. mahatma@gandhi.com" class="input" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="password-input" class="label">Password</label>
+                        <div class="control">
+                            <input id="password-input" type="password" placeholder="*******" class="input" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="otp-secret-input" class="label">OTP secret</label>
+                        <div class="control">
+                            <input id="otp-secret-input" type="text" placeholder="Your OTP secret here" class="input" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button class="button is-success" id="save-btn">
+                            Save
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="field">
-            <label for="" class="label">Password</label>
-            <div class="control">
-                <input id="password-input" type="password" placeholder="*******" class="input" required>
-            </div>
-        </div>
-        <div class="field">
-            <label for="" class="label">OTP secret</label>
-            <div class="control">
-                <input id="otp-secret-input" type="text" placeholder="Your OTP secret here" class="input" required>
-            </div>
-        </div>
-        <div class="field">
-            <button class="button is-success" id="save-btn">
-                Save
-            </button>
-        </div>
-    </div>
-	
+        
 	<noscript>Please enable JavaScript to use this application</noscript>
   </body>
 </html>
