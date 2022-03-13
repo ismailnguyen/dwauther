@@ -32,6 +32,9 @@ Demandware/SFCC login automater including MFA generation
 - If you already have MFA enabled (e.g. using Salesforce Authenticator mobile application), please reset your MFA from Salesforce's Account Manager (or ask an administrator to do the reset)
 - Log in any Business Manager, after using your username/password you should be redirected to the MFA setup page
 - Instead of choosing Salesforce Authenticator way, choose the way with a third party OTP tool
+- Click on the link " I cannot scan the QR Code" to reveal the OTP secret
+
+OR
 - Download the QR Code displayed by Salesforce
 - Use any online QR decoder tool (e.g. [webqr.com](https://webqr.com/))
     - On webqr.com you can use the "Camera" icon to upload your save QR code image
